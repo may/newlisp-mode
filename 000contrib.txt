@@ -1,0 +1,68 @@
+Author: Tim Johnson (Currently Primary Maintainer)
+Purpose:
+
+To constructively make this mode a organically growing system. For the most
+part, I think this is also relevant for vim and any other development system in
+the Open Source venue.
+
+1)Let there be a Primary Maintainer - for now it is me, but if I don't start
+coding in newlisp myself - I would like to see that change. The Primary
+Maintainer (PM) should be the one responsible for finalizing code changes.
+
+2)Let there be a single location for publicly posted code modules. I recommend
+that it be http://newlisp.org/code/ or something like that...
+
+3)If one has code changes to submit, post those changes to the forum, but take
+care to annotate the code changes so that the PM can easly identify the changes
+and document them. The contributor should let the PM know also whether he/she
+wants their email address posted, obfuscated or left out entirely. The PM
+should receive an email on this subject, a link to the topic in the forum would
+be sufficient.
+
+4)The PM would then integrate the new code into the existing codebase and then
+submit it to Lutz for public posting.
+
+5)If there are errors, the PM should be notified similarly as above.
+
+------------------------------------------------------------------------------
+7)Of a practical nature, submitting code changes or additions to the original
+author or the current maintainer for implementation creates a single 'code
+repository' that allows changes to proceed from one point and would be a more
+appealing alternative to numerous "code forks" IMHO.
+-------------------------------------------------------------------------------
+
+The following may be more pertinent to GNU emacs and XEmacs than to vim, but
+bears stating:
+----------------------------------------------------------------------------------
+8)Emacs is a very large, system. It is essentially an operating environment for a
+General Purpose Programming Language (GPL) called elisp. Elisp modules that are
+part of the system and included as part of the standard distribution have to
+meet some exacting standards. Regardless of whether someone reading this is an
+emacs user or uses some other development environment, you would probably agree
+that it would be a good thing for a newlisp mode to be part of the standard
+emacs distribution.
+----------------------------------------------------------------------------------
+
+If we make the "Emacs Gods" happy, newlisp mode could be a candidate for
+distribution with GNU Emacs or Xemacs or both.
+
+Tips and Pointers:
+
+A)Please maintain a readable indendation scheme. Code that is all left-justified looks
+bad in any Programming Language.
+
+B)Please don't use setq to define a symbol. For symbols local to a function, use
+the 'let form. For global variable and constant symbols, use defvar and defconst.
+If you think that elisp's approach to scope is kind of wierd, you'll get no
+argument from me...... anyway, here's why:
+
+  ==>Using setq inside of a function without binding it properly can cause
+	 upredictable results by inadvertantly reseting a global symbol or
+	 introducing a symbol unnecessarily into the global environment. *And* it
+	 *will* displease the Emacs Gods! See item 8.
+
+C)Begin any symbol with 'newlisp-
+  elisp doesn't have any kind of namespace features, so the convention is
+  that all symbols start with the module name. Thanks.
+
+D)Feel free to let me know if I break any of my "own rules".
