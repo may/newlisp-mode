@@ -7,6 +7,8 @@ The following elisp code in my .emacs or init.el works for me.
 - Nicholas E. May
 
 
+;; Use this to get newlisp mode up and running
+
 (add-to-list 'load-path "~/newlisp-mode")
 (load-file "~/newlisp-mode/newlisp.el")
 ;(require 'newlisp-mode)
@@ -14,5 +16,15 @@ The following elisp code in my .emacs or init.el works for me.
 ;(autoload 'newlisp "newlisp" "Major mode for newlisp files" t)
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".lsp"))
 
+;; Misc. modifications/additions I've made to make life better/easier
+
 ; Another way to use C-x C-e to eval stuff and doesn't jump to next function
 ;(define-key newlisp-mode-map [(control x) (control e)] 'newlisp-evaluate-prev-sexp)
+
+
+;; OR run-newlisp?
+(defun start-newlisp ()
+  "Starts newlisp interperter/or shows if already running.  Requires
+newlisp-mode to be loaded."
+  (interactive)
+  (newlisp-show-interpreter))
