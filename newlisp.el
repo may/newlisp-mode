@@ -63,7 +63,7 @@
 ;;     control-c control-h
 ;;; Code:
 ;; ===========================================================================================
-(require 'scheme)          ;; Enherit Scheme mode
+(require 'scheme)          ;; Inherit Scheme mode
 (require 'tj-parenface)    ;; Highlight parens and brackets
 ;(require 'nl-doc-assoc)    ;; Data structure holding documentation
 ;; ===========================================================================================
