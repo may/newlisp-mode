@@ -1,0 +1,15 @@
+Note that I just found this code somewhere, got it to work and am documenting
+what I've found and any fixes/improvements I make here in case someone else
+finds them useful.
+
+The following elisp code in my .emacs or init.el works for me.
+
+- Nicholas E. May
+
+
+(add-to-list 'load-path "~/newlisp-mode")
+(load-file "~/newlisp-mode/newlisp.el")
+;(require 'newlisp-mode)
+(add-to-list 'auto-mode-alist '("\\.lsp$" . newlisp-mode))
+;(autoload 'newlisp "newlisp" "Major mode for newlisp files" t)
+(eval-after-load "speedbar" '(speedbar-add-supported-extension ".lsp"))
