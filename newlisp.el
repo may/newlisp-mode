@@ -531,8 +531,8 @@ Then, put cursor in other window."
 	(let ((openers 1) (closers 0))
 		(while (and (not (eobp)) (> openers closers))
 			(cond
-				((eq (following-char) ?\() (incf openers))
-			  ((eq (following-char) ?\)) (incf closers)))
+				((eq (following-char) ?\() (setq openers (+ 1 openers)))
+                                ((eq (following-char) ?\)) (setq closers (+ 1 closers))))
 			(forward-char 1))))
 
 (defun newlisp-select-list ()

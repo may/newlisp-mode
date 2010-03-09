@@ -13,3 +13,6 @@ The following elisp code in my .emacs or init.el works for me.
 (add-to-list 'auto-mode-alist '("\\.lsp$" . newlisp-mode))
 ;(autoload 'newlisp "newlisp" "Major mode for newlisp files" t)
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".lsp"))
+
+; Another way to use C-x C-e to eval stuff and doesn't jump to next function
+;(define-key newlisp-mode-map [(control x) (control e)] 'newlisp-evaluate-prev-sexp)
