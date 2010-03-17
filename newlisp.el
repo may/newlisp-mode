@@ -117,7 +117,7 @@
 ;; ===========================================================================================
 (defface newlisp-font-lock-keywords-face
   '((((class color) (background light)) (:foreground "green4"))
-    (((class color) (background dark)) (:foreground "yellow"))
+    (((class color) (background dark)) (:foreground "cyan")) ;; was yellow NEM
     (((class grayscale) (background light)) (:foreground "dimgray" :italic t))
     (((class grayscale) (background dark)) (:foreground "lightgray" :italic t))
     (t (:bold t)))
@@ -137,7 +137,7 @@
 ;; ===========================================================================================
 (defface newlisp-font-lock-user-keywords-face
   '((((class color) (background light)) (:foreground "red4"))
-    (((class color) (background dark)) (:foreground "yellow3"))
+    (((class color) (background dark)) (:foreground "dark slate gray")) ;; NEM was yellow3
     (((class grayscale) (background light)) (:foreground "dimgray" :italic t))
     (((class grayscale) (background dark)) (:foreground "lightgray" :italic t))
     (t (:bold t)))
@@ -180,7 +180,8 @@
 		 "eval-string" "exec" "exists" "exit" "exp" "expand" "explode" "factor" "fft" "file-info" 
 		 "file?" "filter" "find" "find-all" "first" "flat" "float" "float?" "floor" "flt" 
 		 "for" "for-all" "fork" "format" "fv" "gammai" "gammaln" "gcd" "get-char" "get-float" 
-		 "get-int" "get-long" "get-string" "get-url" "global" "global?" "if" "ifft" "import" 
+		 "get-int" "get-long" "get-string" "get-url" "global" "global?"
+                 "if" "if-not" "ifft" "import" 
 		 "inc" "index" "int" "integer" "integer?" "intersect" "invert" "irr" "join" "lambda?" 
 		 "last" "legal?" "length" "let" "letex" "letn" "list" "list?" "load" "local" "log" 
 		 "lookup" "lower-case" "macro?" "main-args" "make-dir" "map" "mat" "match" "max" 
