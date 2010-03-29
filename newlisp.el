@@ -117,7 +117,10 @@
 ;; ===========================================================================================
 (defface newlisp-font-lock-keywords-face
   '((((class color) (background light)) (:foreground "green4"))
-    (((class color) (background dark)) (:foreground "cyan")) ;; was yellow NEM
+; Uncomment this and delete the following line to reduce visual color-coding
+; clutter - NEM 
+;    (((class color) (background dark)) (:foreground "green")) ;; uncomment this
+    (((class color) (background dark)) (:foreground "cyan")) ;; delete this
     (((class grayscale) (background light)) (:foreground "dimgray" :italic t))
     (((class grayscale) (background dark)) (:foreground "lightgray" :italic t))
     (t (:bold t)))
