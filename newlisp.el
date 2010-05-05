@@ -161,7 +161,7 @@
 ;; ==========================================================================
 (defconst 
   newlisp-function-names-regexp
-  (regexp-opt '("define" "defun" "fn")))
+  (regexp-opt '("define" "fn")))
 ;; ==========================================================================
 ;; 2008-03-12 Jeff Ober: updated with 9.3.3's symbols [(map string (symbols))]
 (defconst
