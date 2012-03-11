@@ -8,9 +8,9 @@ $ git clone https://github.com/may/newlisp-mode.git
 (add-to-list 'auto-mode-alist '("\\.lsp$" . newlisp-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; The above will unconditionally load newlisp-mode on every startup.  If you'd
 ;; rather wait to load it until you actually need it, use this instead:
-
 (add-to-list 'load-path "~/newlisp-mode") 
 (autoload 'newlisp "newlisp" "Major mode for newlisp files" t)
 (add-to-list 'auto-mode-alist '("\\.lsp$" . newlisp-mode))
