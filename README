@@ -8,7 +8,6 @@ $ git clone https://github.com/may/newlisp-mode.git
 (add-to-list 'auto-mode-alist '("\\.lsp$" . newlisp-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;; The above will unconditionally load newlisp-mode on every startup.  If you'd
 ;; rather wait to load it until you actually need it, use this instead:
 
@@ -33,6 +32,7 @@ newlisp-mode to be loaded."
   (newlisp-show-interpreter))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 Please note -- I just found this code somewhere, got it to work and am documenting what I've found and any fixes/improvements I make here in case someone else finds them useful.
 
 - Nicholas E. May
