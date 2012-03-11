@@ -1,34 +1,38 @@
-;; Use this to get newlisp mode up and running
+;; Quickstart
 
+;; Download newlisp-mode:
+$ git clone https://github.com/may/newlisp-mode.git
+
+;; Place this in your .emacs to get up and running with newlisp-mode.
 (load-file "~/newlisp-mode/newlisp.el")
 (add-to-list 'auto-mode-alist '("\\.lsp$" . newlisp-mode))
-===============================================================================
 
-;; If you don't want to load newlisp-mode on every startup, remove the 
-;; load-file line and use these instead
-; (add-to-list 'load-path "~/newlisp-mode") ; possibly optional, try w/o first
-; (autoload 'newlisp "newlisp" "Major mode for newlisp files" t)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; optional
+;; The above will unconditionally load newlisp-mode on every startup.  If you'd
+;; rather wait to load it until you actually need it, use this instead:
+
+(add-to-list 'load-path "~/newlisp-mode") 
+(autoload 'newlisp "newlisp" "Major mode for newlisp files" t)
+(add-to-list 'auto-mode-alist '("\\.lsp$" . newlisp-mode))
+
+
+;;;; Things that might make life easier:
+
+;; Make Emacs' "speedbar" recognize newlisp files
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".lsp"))
 
+;; Another way to use C-x C-e to eval stuff and doesn't jump to next function
+(define-key newlisp-mode-map [(control x) (control e)] 'newlisp-evaluate-prev-sexp)
 
-;; Misc. modifications/additions I've made to make life better/easier
-
-; Another way to use C-x C-e to eval stuff and doesn't jump to next function
-;(define-key newlisp-mode-map [(control x) (control e)] 'newlisp-evaluate-prev-sexp)
-
-
-;; OR run-newlisp?
+;; I think I got tired of typing 'newlisp-show-interpreter' all the time.
 (defun start-newlisp ()
-  "Starts newlisp interperter/or shows if already running.  Requires
+  "Starts newlisp interpreter/or shows if already running.  Requires
 newlisp-mode to be loaded."
   (interactive)
   (newlisp-show-interpreter))
 
-=========================================
-Note that I just found this code somewhere, got it to work and am documenting
-what I've found and any fixes/improvements I make here in case someone else
-finds them useful.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Please note -- I just found this code somewhere, got it to work and am documenting what I've found and any fixes/improvements I make here in case someone else finds them useful.
 
 - Nicholas E. May
